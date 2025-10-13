@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CalendarIcon, Users, MapPin, DollarSign } from "lucide-react";
+import { toast } from "sonner";
 
 interface ContextFormProps {
   onSubmit: (context: any) => void;
@@ -21,6 +22,23 @@ export const ContextForm = ({ onSubmit }: ContextFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validation
+    if (!context.date) {
+      toast.error("Please select a date");
+      return;
+    }
+    
+    if (!context.time) {
+      toast.error("Please select a time");
+      return;
+    }
+    
+    if (!context.location) {
+      toast.error("Please enter a location");
+      return;
+    }
+    
     onSubmit(context);
   };
 
@@ -40,6 +58,7 @@ export const ContextForm = ({ onSubmit }: ContextFormProps) => {
               value={context.date}
               onChange={(e) => setContext({ ...context, date: e.target.value })}
               className="bg-background/50 border-border/50"
+              required
             />
           </div>
           <div className="space-y-2">
@@ -50,6 +69,7 @@ export const ContextForm = ({ onSubmit }: ContextFormProps) => {
               value={context.time}
               onChange={(e) => setContext({ ...context, time: e.target.value })}
               className="bg-background/50 border-border/50"
+              required
             />
           </div>
         </div>
@@ -65,6 +85,7 @@ export const ContextForm = ({ onSubmit }: ContextFormProps) => {
             value={context.location}
             onChange={(e) => setContext({ ...context, location: e.target.value })}
             className="bg-background/50 border-border/50"
+            required
           />
         </div>
 
