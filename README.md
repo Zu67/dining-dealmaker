@@ -8,7 +8,7 @@ The screen in `src` is:
 - Profile (`src/components/ExecutiveProfile.tsx`): name, title, company, location, and diet, cuisine, and preference traits, each with a confidence percentage.
 - Venue cards (`src/components/VenueCard.tsx`): rank, match score, cuisine, distance, price, noise, rating, feature badges, an AI rationale, and a "Book This Venue" button.
 
-`src/pages/Index.tsx` fills those components from mock executive and venue data. A meeting context form (date, time, location, party size, and budget) sits between the profile and the venue cards. The commits on 2025-10-13 are from gpt-engineer-app[bot].
+Any search shows the same mock profile in `src/pages/Index.tsx`: Jane Doe, Chief Financial Officer at Atlassian, in San Francisco. The traits are pescatarian, moderate wine, Mediterranean and Japanese, quiet and private, premium price, and low noise. The typed name is stored and is not used to choose a person. A toast says "Found executive: Jane Doe", and the meeting form (date, time, location, party size, and budget) appears after 800ms. Submitting it shows three venues: Waterbar (Contemporary Seafood, 0.3 mi, match 0.94), Octavia (Mediterranean, 0.5 mi, match 0.89), and Kusakabe (Japanese Kaiseki, 0.7 mi, match 0.87). "Book This Venue" only shows a toast. Before a search, the page says "Search for an executive to get started". The commits on 2025-10-13 are from gpt-engineer-app[bot].
 
 From the repository root:
 
