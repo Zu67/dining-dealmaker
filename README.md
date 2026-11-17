@@ -1,6 +1,6 @@
 # Table Talk
 
-Table Talk is the AI sales dining assistant named in `index.html` ("Table Talk - AI Sales Dining Assistant"). The home page says "Break bread. Close deals." and "AI-powered dining recommendations that understand executive preferences and accelerate your sales process."
+Table Talk is the AI sales dining assistant named in `index.html` ("Table Talk - AI Sales Dining Assistant"). The description meta says "AI-powered sales dining companion that finds executives, infers preferences, and books perfect venues to accelerate deals". The Open Graph description says "AI-powered sales dining companion for enterprise deal acceleration". The author meta is "Table Talk". The Open Graph and Twitter images are both `https://lovable.dev/opengraph-image-p98pqg.png`, and `twitter:site` is `@lovable_dev`. `package.json` names the package `vite_react_shadcn_ts` at version `0.0.0`. The home page says "Break bread. Close deals." and "AI-powered dining recommendations that understand executive preferences and accelerate your sales process."
 
 The screen in `src` is:
 
