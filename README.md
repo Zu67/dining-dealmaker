@@ -10,12 +10,11 @@ The screen in `src` is:
 
 `src/pages/Index.tsx` fills those components from mock executive and venue data. A meeting context form (date, time, location, party size, and budget) sits between the profile and the venue cards. The commits on 2025-10-13 are from gpt-engineer-app[bot].
 
-## What technologies are used for this project?
+From the repository root:
 
-This project is built with:
+```bash
+npm install
+npm run dev
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Vite serves the app. `npm run build` writes the production bundle. The UI uses React, TypeScript, Tailwind CSS, and shadcn-ui.
